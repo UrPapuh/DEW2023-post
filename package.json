@@ -1,0 +1,28 @@
+{
+  "name": "dew2023-post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrPapuh/DEW2023-post.git"
+  },
+  "author": "UrPapuh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UrPapuh/DEW2023-post/issues"
+  },
+  "homepage": "https://github.com/UrPapuh/DEW2023-post#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
+    "@types/jest": "^29.5.6",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "jest": "^29.7.0"
+  }
+}
