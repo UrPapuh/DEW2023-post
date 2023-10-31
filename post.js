@@ -28,7 +28,9 @@ class Post {
   }
 
   detach(user) {
-    if (this.#subscribers.includes(user)) {
+    const index = this.#subscribers.indexOf(user);
+    if (index >= 0) {
+      this.#subscribers.splice(index, 1);
     }
   }
 }
