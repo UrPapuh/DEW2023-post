@@ -1,5 +1,3 @@
-const User = require('./user');
-
 class Post {
   name;
 
@@ -22,7 +20,7 @@ class Post {
   }
 
   attach(user) {
-    if (user instanceof User && !(this.#subscribers.includes(user))) {
+    if (!(this.#subscribers.includes(user))) {
       this.#subscribers.push(user);
     }
   }
@@ -32,6 +30,11 @@ class Post {
     if (index >= 0) {
       this.#subscribers.splice(index, 1);
     }
+  }
+
+  publish() {
+    this.#number += 1;
+    return this.#subscribers.map((s) => s.notify(this));
   }
 }
 

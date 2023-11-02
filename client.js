@@ -1,5 +1,4 @@
 const User = require('./user');
-const PaidPost = require('./paid-post');
 
 class Client extends User {
   billing;
@@ -10,9 +9,8 @@ class Client extends User {
   }
 
   notify(paidpost) {
-    if (paidpost instanceof PaidPost) {
-      this.billing += Number(paidpost.price.toFixed(2));
-    }
+    this.billing += (paidpost.price || 0);
+    this.billing = Number(this.billing.toFixed(2));
     return this.read(paidpost.summary);
   }
 }
